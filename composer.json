@@ -1,40 +1,31 @@
 {
-    "name": "casperboone/zabbix-graph",
+    "name": "alexdeoliveira/zabbix-graph",
     "description": "Get nice looking graphs of your Zabbix devices.",
     "keywords": [
         "Zabbix Graph"
     ],
-    "homepage": "https://github.com/casperboone/zabbix-graph",
+    "homepage": "https://github.com/alexdeoliveira/zabbix-graph",
     "license": "MIT",
     "authors": [
         {
-            "name": "Casper Boone",
-            "email": "mail@casperboone.nl",
-            "homepage": "https://casperboone.nl",
+            "name": "Aléx de Oliveira",
+            "email": "alex.oliveira.web@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
         "php": "^7.0",
-        "guzzlehttp/guzzle": "~6.1"
-    },
-    "require-dev": {
-        "mockery/mockery": "^0.9.9",
-        "phpunit/phpunit": "^6.0",
-        "vlucas/phpdotenv": "^2.4"
+        "guzzlehttp/guzzle": "^7.1.1"
     },
     "autoload": {
         "psr-4": {
-            "CasperBoone\\ZabbixGraph\\": "src"
+            "Alexdeoliveira\\ZabbixGraph\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "CasperBoone\\ZabbixGraph\\Test\\": "tests"
+            "Alexdeoliveira\\ZabbixGraph\\Test\\": "tests"
         }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit"
     },
     "config": {
         "sort-packages": true

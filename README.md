@@ -1,20 +1,15 @@
 # 📈 PHP Zabbix Graph
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/casperboone/zabbix-graph.svg?style=flat-square)](https://packagist.org/packages/casperboone/zabbix-graph)
-[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![StyleCI](https://styleci.io/repos/86865582/shield)](https://styleci.io/repos/86865582)
-[![Build Status](https://img.shields.io/travis/casperboone/zabbix-graph/master.svg?style=flat-square)](https://travis-ci.org/casperboone/zabbix-graph)
-[![SensioLabsInsight](https://img.shields.io/sensiolabs/i/09228096-56d8-4618-93a0-92bacc86a0c9.svg?style=flat-square)](https://insight.sensiolabs.com/projects/09228096-56d8-4618-93a0-92bacc86a0c9)
-[![Quality Score](https://img.shields.io/scrutinizer/g/casperboone/zabbix-graph.svg?style=flat-square)](https://scrutinizer-ci.com/g/casperboone/zabbix-graph)
-[![Code Coverage](https://img.shields.io/scrutinizer/coverage/g/casperboone/zabbix-graph/master.svg?style=flat-square)](https://scrutinizer-ci.com/g/casperboone/zabbix-graph/?branch=master)
+Get a graph from Zabbix to display on a webpage or save to a file. If you are using Laravel, then please check out [this repository](https://github.com/alexdeoliveira/laravel-zabbix-graph). 
 
-Get a graph from Zabbix to display on a webpage or save to a file. If you are using Laravel, then please check out [this repository](https://github.com/casperboone/laravel-zabbix-graph). 
+## Original Package
+https://github.com/casperboone/zabbix-graph
 
 ## Installation
 You can install the package via composer:
 
 ``` bash
-composer require casperboone/zabbix-graph
+composer require alexdeoliveira/zabbix-graph
 ```
 
 Require Composer's autoload (probably already done):
@@ -25,11 +20,11 @@ require __DIR__.'/../vendor/autoload.php';
 
 ## Usage
 ### Basic Usage
-You can create an instance of `CasperBoone\ZabbixGraph` and pass the full URL to your Zabbix installation, the username and the password through the constructor. On this instance you can get a graph from Zabbix by calling `->find($graphId)`. Graph IDs can be found in the URL of the Zabbix UI of a certain graph.
+You can create an instance of `Alexdeoliveira\ZabbixGraph` and pass the full URL to your Zabbix installation, the username and the password through the constructor. On this instance you can get a graph from Zabbix by calling `->find($graphId)`. Graph IDs can be found in the URL of the Zabbix UI of a certain graph.
 
 Example:
 ```php
-$zabbixGraph = new CasperBoone\ZabbixGraph('http://my-zabbix.com', 'username', 'passsword');
+$zabbixGraph = new Alexdeoliveira\ZabbixGraph('http://my-zabbix.com', 'username', 'passsword');
 
 $zabbixGraph->width(500)
     ->height(300)
@@ -54,34 +49,5 @@ If you're using Zabbix 1.8 or older, then you need to set the last parameter of 
 
 Example:
 ```php
-$zabbixGraph = new CasperBoone\ZabbixGraph('http://my-zabbix.com', 'username', 'passsword', true);
+$zabbixGraph = new Alexdeoliveira\ZabbixGraph('http://my-zabbix.com', 'username', 'passsword', true);
 ```
-
-## Changelog
-
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
-
-## Testing
-
-``` bash
-$ composer test
-```
-
-One of the integration tests requires a non public Zabbix installation. In order to execute this test, you have to create a `.env` file in the project root and copy the contents of `.env.example` into it. Complete the `.env` file with the host, a username/password and an available graph ID.
-
-## Contributing
-
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
-
-## Security
-
-If you discover any security related issues, please email mail@casperboone.nl instead of using the issue tracker.
-
-## Credits
-
-- [Casper Boone](https://github.com/casperboone)
-- [All Contributors](../../contributors)
-
-## License
-
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
