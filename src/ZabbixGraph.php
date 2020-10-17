@@ -1,6 +1,6 @@
 <?php
 
-namespace CasperBoone\ZabbixGraph;
+namespace Alexdeoliveira\ZabbixGraph;
 
 use DateTime;
 use GuzzleHttp\Client as HttpClient;
